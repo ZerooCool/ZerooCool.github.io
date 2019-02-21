@@ -1,19 +1,79 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<style>
+<!--
+.myclass {visibility: hidden}
+.myclass2 { color: rgb(0,128,128); font-weight: bold; font-family: Times New Roman; font-size: 14pt; text-transform: uppercase; text-align: center; margin-right: 0px; margin-bottom: 0px }
+-->
+</style>
+<script language="JavaScript">
+<!--
+var nbfois = 0;
+var car = "";
+var nbrep = 9; // Parce que JAVASCRIPT a 10 lettres
 
+function tableau(n)
+{
+this.length = n;
+for (var i=0; i<=n; i++) {this[i] = i;}
+return this; 
+}
+function decrypt()
+{
+text.innerHTML = "";
+var mm = new tableau (9);
+var texte = "";
+nbfois = nbfois + 1;
+if (nbfois==20) { nbrep = 11; car = "V";}
+if (nbfois==40) { nbrep = 10; car = "Vi";}
+if (nbfois==60) { nbrep = 9; car = "Vis";}
+if (nbfois==80) { nbrep = 8; car = "Visi";}
+if (nbfois==100){ nbrep = 7; car = "Visio";}
+if (nbfois==120) {nbrep = 6; car = "Vision";}
+if (nbfois==140) {nbrep = 5; car = "Vision ";}
+if (nbfois==160) {nbrep = 4; car = "Vision d";}
+if (nbfois==180) {nbrep = 3; car = "Vision du";}
+if (nbfois==200) {nbrep = 2; car = "Vision du ";}
+
+if (nbfois==220) {nbrep = 1; car = "Vision du w";}
+if (nbfois==240) {nbrep = 0; car = "Vision du we";}
+if (nbfois==260) {nbrep = -1; car = "Vision du web";}
+for (i=0; i<=nbrep; i++) 
+{
+text2.innerHTML = mm[Math.ceil(Math.random()*9)];
+texte = texte + text2.innerHTML;
+text.innerHTML = car + texte; 
+} 
+
+if (nbrep!=-1){setTimeout ('decrypt()',1);}
+else {text.innerHTML="Vision du Web";}
+}
+// -->
+</script>
+</head>
+<body onload="decrypt()">
 <h1>Bienvenue sur la page GitHub de ZerooCool</h1>
 
 <h2>Les projets</h2>
 
-Consulter la page d'accueil Unis pour le climat proposée pour Discord : <a href="https://zeroocool.github.io/unis-pour-le-climat/" target="_self">Unis pour le climat</a>
+La page d'accueil Unis pour le climat proposée pour Discord : <a href="https://zeroocool.github.io/unis-pour-le-climat/" target="_self">Unis pour le climat</a>
 
-<h2>Le site officiel du développeur</h2>
+<div style="text-align:center;"><h2>Le site officiel du développeur</h2>
+
+<script LANGUAGE="javascript">
+<!--
+document.writeln('<div id="text" class="myclass2"></div><div id="text2" class="myclass"></div>');
+//-->
+</script>
 
 Consulter le site officiel du développeur : <a href="https://www.visionduweb.eu" target="_self">Vision du web</a>
 <br/><br/>
-Consulter le wiki officiel du développeur : <a href="https://www.visionduweb.eu/wiki" target="_self">Wiki</a>
+Consulter le wiki officiel du développeur : <a href="https://www.visionduweb.eu/wiki" target="_self">Wiki</a></div>
 
 <h2>Les partenaires</h2>
 
 Membre de la communauté <a href="https://www.developpez.com" target="_self">Développez</a>
+</body>
 </html>
